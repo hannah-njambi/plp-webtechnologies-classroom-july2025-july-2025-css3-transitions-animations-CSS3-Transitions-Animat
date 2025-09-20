@@ -1,0 +1,46 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Part 1: CSS Animations */
+.animated-btn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+.animated-btn:hover {
+  transform: scale(1.2);
+  background: #45a049;
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 20px auto;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50px); }
+}
+
+/* Part 3: Box triggered by JS */
+.js-box {
+  width: 100px;
+  height: 100px;
+  background: steelblue;
+  margin: 20px auto;
+  transition: transform 0.5s ease;
+}
+.js-box.active {
+  transform: rotate(45deg) scale(1.5);
+  background: purple;
+}
